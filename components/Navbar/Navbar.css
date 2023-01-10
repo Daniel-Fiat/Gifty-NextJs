@@ -1,0 +1,29 @@
+#Navbar {
+    background-color: var(--color-celeste);
+}
+
+#Navbar div {
+    width: 2rem;
+}
+
+#Navbar img {
+    width: 1.5rem;
+}
+
+#Navbar span {
+    color: var(--color-blue);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+#Link :active {
+    background-color: #DC0027;
+}
+
+.margin-bottom-app {
+    height: 65.912px;
+}
+
+.nondisplay {
+    display: none;
+}

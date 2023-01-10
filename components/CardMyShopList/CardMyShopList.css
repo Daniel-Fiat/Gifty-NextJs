@@ -1,0 +1,63 @@
+.cardmyshop {
+    margin-bottom: 10px;
+}
+
+.cardmyshop form {
+    margin-bottom: .5rem;
+    text-align: center;
+}
+
+.cardmyshop button {
+    border: 1px solid;
+    border-radius: 15px;
+    border-color: var(--color-red);
+    background-color: var(--color-red);
+    color: white;
+    font-weight: bold;
+    width: 150px;
+    margin: 0.5rem;
+    padding: 5px;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.cardmyshop .card {
+    flex-direction: row;
+    align-items: center;
+    border: 0;
+}
+
+.cardmyshop .card-body {
+    color: var(--color-blue);
+}
+
+.cardmyshop .h5 {
+    font-size: 14px;
+}
+
+.cardmyshop .h5:nth-child(1) {
+
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+#buttons-myshop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#img-card-myshop {
+    height: 170px;
+    object-fit: cover;
+    width: 130px;
+    border-radius: 8px;
+}
+
+@media (min-width: 600px) {
+    #img-card-myshop {
+        height: 400px;
+    }
+}

@@ -1,0 +1,34 @@
+.card-search-product {
+    margin-bottom: 20px;
+}
+
+.card-search-product a {
+    text-decoration: none;
+}
+
+.card-search-product p {
+    color: var(--color-blue);
+    text-align: center;
+    margin: 0;
+}
+
+.card-search-product .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    width: 100%;
+    font-size: 14px;
+}
+
+.card-search-product .price {
+    font-weight: bold;
+    overflow-wrap: break-word;
+
+}
+
+#homeRating {
+    font-size: .7rem;
+}

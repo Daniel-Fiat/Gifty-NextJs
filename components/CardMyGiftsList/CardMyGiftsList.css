@@ -1,0 +1,63 @@
+#img-card-mygift {
+    height: 100px;
+    object-fit: cover;
+    width: 100px;
+    border-radius: 8px;
+}
+
+#card-mygift {
+    flex-direction: row;
+    align-items: center;
+    border: 0;
+}
+
+#card-mygift .card-body {
+    font-size: 14px;
+}
+
+#card-mygift .h5 {
+    font-size: 14px;
+}
+
+#card-mygift .h5:nth-child(1) {
+    font-weight: bold;
+    color: var(--color-blue);
+    text-transform: capitalize;
+}
+
+#card-mygift .h5:nth-child(2) {
+    font-weight: regular;
+    color: var(--color-blue);
+}
+
+#card-mygift .h5:nth-child(3) {
+    font-weight: regular;
+    color: var(--color-blue);
+    font-size: 12px;
+}
+
+.title-review-accordion button {
+    color: var(--color-blue);
+    padding: 5px;
+}
+
+@media (min-width: 600px) {
+    #img-card-mygift {
+        height: 400px;
+    }
+}
+
+#textareaComent {
+    width: 100%;
+    background: #F6FBFF;
+    border-radius: 10px;
+    box-shadow: 14px 15px 21px -11px rgba(20, 35, 57, 0.07);
+    border-color: var(--color-red);
+}
+
+#rating {
+    background: #F6FBFF;
+    border-radius: 10px;
+    box-shadow: 14px 15px 21px -11px rgba(20, 35, 57, 0.07);
+    border-color: var(--color-red);
+}
