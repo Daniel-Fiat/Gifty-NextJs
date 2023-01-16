@@ -1,50 +1,49 @@
+import Image from 'next/image';
+import Link from 'next/link';
 import Navbar from 'react-bootstrap/Navbar';
-import { Link, useLocation } from 'react-router-dom';
-import homelogo from '../../assets/Boton1.png';
-import lupa from '../../assets/lupa.png';
-import profile from '../../assets/perfil.png';
-import gift from '../../assets/regalos.png';
-import './Navbar.css';
+import homelogo from '../../public/assets/Boton1.png';
+import lupa from '../../public/assets/lupa.png';
+import profile from '../../public/assets/perfil.png';
+import gift from '../../public/assets/regalos.png';
+import Style from '../../styles/Navbar.module.css';
 
 function NavBar() {
-    const location = useLocation().pathname.toLowerCase();
-    const paths = ["/login", "/registerlogin", "/register", "/sucesspayment/", "/cancelpayment/", "/postsucesspayment"];
-    if (paths.some(path => location.includes(path))) {
-        return null
-    } else {
-        return (
-            <>
-                <Navbar id="Navbar" fixed="bottom"
-                    className="d-flex justify-content-evenly">
-                    <div className="d-flex flex-column align-items-center">
-                        <Link style={{ color: 'white', textDecoration: 'none', textAlign: 'center' }} className='link-navbar' to='/'>
-                            <img src={homelogo} alt="" />
-                            <span>Home</span>
-                        </Link>
+    return (
+        <>
+            <Navbar id={Style.Navbar}
+                fixed="bottom"
+                className=" navbar d-flex justify-content-evenly">
+                <Link href={'/'} id={Style.Link}>
+                    <div id={Style.Navbardiv} className="d-flex flex-column align-items-center">
+                        <Image src={homelogo} alt="" id={Style.Image} />
+                        <span>Home</span>
                     </div>
+                </Link>
+                <Link href={'/'} id={Style.Link}>
                     <div className="d-flex flex-column align-items-center">
-                        <Link style={{ color: 'white', textDecoration: 'none', textAlign: 'center' }} className='link-navbar' to='/search'>
-                            <img src={lupa} alt="" />
-                            <span>Search</span>
-                        </Link>
+                        <Image src={lupa} alt="" id={Style.Image} />
+                        <span>Search</span>
                     </div>
+                </Link>
+                <Link href={'/'} id={Style.Link}>
                     <div className="d-flex flex-column align-items-center">
-                        <Link style={{ color: 'white', textDecoration: 'none', textAlign: 'center' }} className='link-navbar' to='/user/mygifts'>
-                            <img src={gift} alt="" />
-                            <span>MyGiftys</span>
-                        </Link>
+                        <Image src={gift} alt="" id={Style.Image} />
+                        <span>MyGiftys</span>
                     </div>
+                </Link>
+                <Link href={'/'} id={Style.Link}>
                     <div className="d-flex flex-column align-items-center">
-                        <Link style={{ color: 'white', textDecoration: 'none', textAlign: 'center' }} className='link-navbar' to='/menu'>
-                            <img src={profile} alt="" />
-                            <span>Profile</span>
-                        </Link>
+                        <Image src={profile} alt="" id={Style.Image} />
+                        <span>Profile</span>
                     </div>
-                </ Navbar>
-                <div className='margin-bottom-app'></div>
-            </>
-        );
-    }
+                </Link>
+            </ Navbar>
+            <div className='margin-bottom-app'></div>
+        </>
+
+    )
+
+
 }
 
 export default NavBar;

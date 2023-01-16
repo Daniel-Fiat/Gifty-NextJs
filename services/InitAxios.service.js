@@ -3,7 +3,7 @@ import axios from 'axios';
 class InitAxios {
     constructor(path) {
         this.axios = axios.create({
-            baseURL: `https://giftyapp.fly.dev/${path}`
+            baseURL: `http://localhost:5005/${path}`
         });
     }
 }

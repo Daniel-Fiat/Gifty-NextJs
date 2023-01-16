@@ -35,7 +35,7 @@
   z-index: -5;
 }
 
-#navbar-top-left {
+#navbartopleft {
   position: absolute;
   width: 57.44px;
   top: 30px;
@@ -43,7 +43,7 @@
   z-index: -1;
 }
 
-#navbar-top-right-top {
+#navbartoprighttop {
   position: absolute;
   width: 102.5px;
   top: 0;
@@ -51,7 +51,7 @@
   z-index: -3;
 }
 
-#navbar-top-right-bot {
+#navbartoprightbot {
   position: absolute;
   width: 48.4px;
   top: 54px;

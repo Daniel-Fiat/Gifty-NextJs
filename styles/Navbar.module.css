@@ -1,13 +1,14 @@
 #Navbar {
-    background-color: var(--color-celeste);
+    background-color: #dfeffb;
 }
 
-#Navbar div {
-    width: 2rem;
-}
-
-#Navbar img {
+#Navbardiv {
     width: 1.5rem;
+}
+
+#Image {
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 #Navbar span {
@@ -16,9 +17,11 @@
     font-size: 0.9rem;
 }
 
-#Link :active {
-    background-color: #DC0027;
+#Link {
+
+    text-decoration: none;
 }
+
 
 .margin-bottom-app {
     height: 65.912px;
