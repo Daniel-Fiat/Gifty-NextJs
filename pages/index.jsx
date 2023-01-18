@@ -20,15 +20,7 @@ import { Carousel, Row } from 'react-bootstrap';
 
 const inter = Inter({ subsets: ['latin'] })
 
-const Home = () => {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    ProductAPI.getTopSix().then(products => {
-      console.log(products)
-      setProducts(products)
-    })
-  }, [])
+const Home = ({ products }) => {
 
   return (
     <>
@@ -116,9 +108,19 @@ const Home = () => {
     </>
   )
 }
+export default Home
+
+export async function getServerSideProps() {
+  const products = await ProductAPI.getTopSix()
+
+  return {
+    props: {
+      products
+    }
+  }
+}
 
 
 
-export default Home;
 
 
