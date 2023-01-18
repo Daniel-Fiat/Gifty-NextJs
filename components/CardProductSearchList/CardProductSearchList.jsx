@@ -10,7 +10,11 @@ const CardProductSearchList = ({ product }) => {
         <Col className={Style.cardsearchproduct} xs="4" lg="4">
             <Link href={`/product/${product._id}`}>
                 <div>
-                    <img src={product.imgUrl} alt={`img${product.name}`} />
+                    <Image
+                        src={product.imgUrl}
+                        height={100}
+                        width={100}
+                        alt={`img${product.name}`} />
                     <p className="title">{product.name.length > 22 ?
                         product.name.substring(0, 20) + "..." :
                         product.name}</p>

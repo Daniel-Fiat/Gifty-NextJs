@@ -5,7 +5,7 @@ import homelogo from '../../public/assets/Boton1.png';
 import lupa from '../../public/assets/lupa.png';
 import profile from '../../public/assets/perfil.png';
 import gift from '../../public/assets/regalos.png';
-import Style from '../../styles/Navbar.module.css';
+import Style from './Navbar.module.css';
 
 function NavBar() {
     return (
