@@ -1,0 +1,14 @@
+.CatalogInput {
+    border: 1px solid;
+    border-radius: 15px;
+    border-color: var(--color-blue);
+    width: 90%;
+    margin: .5rem;
+    padding: 7px;
+}
+
+#wishListTitle {
+    font-weight: bold;
+    color: var(--color-red);
+    margin-top: 12px;
+}

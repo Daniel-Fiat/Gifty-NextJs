@@ -7,6 +7,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'i.blogs.es',
       },
+      {
+        protocol: 'https',
+        hostname: 'elmueble.com',
+      },
     ],
   },
 }
