@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { AuthContext } from '../../context/auth.context';
 import { useContext, useEffect, useState } from "react";
 import { useRouter } from 'next/router'
 import Image from "next/image";
@@ -20,6 +21,8 @@ const ProductDetail = () => {
     const [validateWishList, setValidateWishList] = useState()
     const [product, setProduct] = useState({})
     const [reviews, setReviews] = useState()
+    const { user } = useContext(AuthContext)
+
     const router = useRouter()
     useEffect(() => {
         ProductAPI.getOneProduct(router.query.id)
@@ -28,7 +31,7 @@ const ProductDetail = () => {
             })
             .then((productRes) => {
                 setProduct(productRes)
-                if (false) {
+                if (user) {
                     UserApi.getOne(user._id).then(userApi => {
                         const newvalidate = userApi.wishList.includes(productRes._id)
                         setValidateWishList(newvalidate)
@@ -47,16 +50,20 @@ const ProductDetail = () => {
 
     const removeWishList = (event) => {
         event.preventDefault()
-        UserApi.removeWishList(user._id, id).then()
-        const newvalidate = false
-        setValidateWishList(newvalidate)
+        if (user) {
+            UserApi.removeWishList(user._id, router.query.id).then()
+            const newvalidate = false
+            setValidateWishList(newvalidate)
+        }
     }
 
     const addWishList = (event) => {
         event.preventDefault()
-        UserApi.addWishList(user._id, id).then()
-        const newvalidate = true
-        setValidateWishList(newvalidate)
+        if (user) {
+            UserApi.addWishList(user._id, router.query.id).then()
+            const newvalidate = true
+            setValidateWishList(newvalidate)
+        }
     }
 
     return (
