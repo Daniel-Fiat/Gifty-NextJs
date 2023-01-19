@@ -103,7 +103,6 @@ const Home = ({ products }) => {
             products?.map(product => <CardProductSearchList key={product._id} product={product}></CardProductSearchList>)
           }
         </Row>
-        <Nabvar />
       </div>
     </>
   )
