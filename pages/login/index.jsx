@@ -1,4 +1,4 @@
-import style from '../../styles/Register.module.css'
+import style from '../../styles/Login.module.css'
 import elipseBlueUp from '../../public/assets/ElipseAzulArriba.png';
 import elipsePinkUp from '../../public/assets/ElipseRosaArriba.png';
 import elipseBlueDown from '../../public/assets/ElipseAzulAbajo.png';
