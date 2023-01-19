@@ -44,7 +44,7 @@ function NavBar() {
                             <span>Profile</span>
                         </div>
                     </Link>
-                </ Navbar>
+                </Navbar>
                 <div className={Style.marginbottomapp}></div>
             </>
 
