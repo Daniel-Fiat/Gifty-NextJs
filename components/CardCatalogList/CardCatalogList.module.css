@@ -1,8 +1,8 @@
-.card-search-product {
+.cardsearchproduct {
     margin-bottom: 20px;
 }
 
-.card-search-product img {
+.cardsearchproductimg {
     width: 100%;
     border-radius: 6px;
     margin-bottom: 5px;
@@ -10,17 +10,17 @@
     height: 100px;
 }
 
-.card-search-product a {
+.cardsearchproduct a {
     text-decoration: none;
 }
 
-.card-search-product p {
+.rating {
     color: var(--color-blue);
     text-align: center;
     margin: 0;
 }
 
-.card-search-product .title {
+.title {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,14 +29,20 @@
     word-break: break-all;
     width: 100%;
     font-size: 14px;
+    color: var(--color-blue);
+    text-align: center;
+    margin: 0;
 }
 
-.card-search-product .price {
+.price {
     font-weight: bold;
+    color: var(--color-blue);
+    text-align: center;
+    margin: 0;
 }
 
 @media (min-width: 600px) {
-    .card-search-product img {
+    .cardsearchproductimg {
         height: 250px;
     }
 }

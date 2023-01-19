@@ -1,4 +1,4 @@
-import './CardMyGiftsList.css';
+import style from './CardMyGiftsList.module.css';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
@@ -26,9 +26,9 @@ const CardCatalogList = ({ order }) => {
     return (
         <Row className="g-4">
             <Col xs={12} md={12}>
-                <Card id="card-mygift">
-                    <Card.Img id="img-card-mygift" variant="top" src={order.productID.imgUrl} />
-                    <Card.Body>
+                <Card id={style.cardMyGift}>
+                    <Card.Img id={style.imgCardMygift} variant="top" src={order.productID.imgUrl} />
+                    <Card.Body id={style.cardMyGift}>
                         <Card.Title>{order.productID.name}</Card.Title>
                         <Card.Title>Delivery Date: {order.deliverDate}</Card.Title>
                         <Card.Title>State: {order.State}</Card.Title>
@@ -48,7 +48,7 @@ const CardCatalogList = ({ order }) => {
                                         <option value={4}>⭐⭐⭐⭐</option>
                                         <option value={5}>⭐⭐⭐⭐⭐</option>
                                     </select>
-                                    <textarea id="textareaComent" onChange={updateReview} name="comment" cols="30" rows="3"></textarea>
+                                    <textarea id={style.textareaComent} onChange={updateReview} name="comment" cols="30" rows="3"></textarea>
                                     <Button type="submit">Review</Button>
                                 </form>
                             </Accordion.Body>

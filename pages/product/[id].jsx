@@ -22,7 +22,6 @@ const ProductDetail = () => {
     const [reviews, setReviews] = useState()
     const router = useRouter()
     useEffect(() => {
-        console.log("?")
         ProductAPI.getOneProduct(router.query.id)
             .then(productRes => {
                 return productRes
@@ -137,12 +136,3 @@ const ProductDetail = () => {
 
 export default ProductDetail;
 
-export async function getServerSideProps() {
-    const products = await ProductAPI.getTopSix()
-
-    return {
-        props: {
-            products
-        }
-    }
-}

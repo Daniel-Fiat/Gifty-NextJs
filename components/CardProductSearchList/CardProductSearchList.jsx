@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Col } from "react-bootstrap";
-import Style from '../../styles/CardProductSearchList.module.css'
+import Style from './CardProductSearchList.module.css'
 
 //import './CardProductSearchList.css';
 

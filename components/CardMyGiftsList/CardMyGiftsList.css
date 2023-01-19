@@ -1,17 +1,18 @@
-#img-card-mygift {
+#cardMyGift {
+    flex-direction: row;
+    align-items: center;
+    border: 0;
+}
+
+#imgCardMygift {
     height: 100px;
     object-fit: cover;
     width: 100px;
     border-radius: 8px;
 }
 
-#card-mygift {
-    flex-direction: row;
-    align-items: center;
-    border: 0;
-}
 
-#card-mygift .card-body {
+.cardMyGift {
     font-size: 14px;
 }
 
