@@ -15,11 +15,11 @@ const RegisterLogin = () => {
                 <Image
                     className={style.elipseBlueUp}
                     src={elipseBlueUp}
-                    alt="" />
+                    alt="elipseBlueUp" />
                 <Image
                     className={style.elipsePinkUp}
                     src={elipsePinkUp}
-                    alt="" />
+                    alt="elipsePinkUp" />
                 <div id={style.registerForm}>
                     <h1>Bienvenido</h1>
                     <p>Para poder hacer tu regalo necesitas estar registrado</p>
@@ -29,11 +29,11 @@ const RegisterLogin = () => {
                 <Image
                     className={style.elipseBlueDown}
                     src={elipseBlueDown}
-                    alt="" />
+                    alt="elipseBlueDown" />
                 <Image
                     className={style.elipseYellowDown}
                     src={elipseYellowDown}
-                    alt="" />
+                    alt="elipseYellowDown" />
             </div>
         </Row>
     );
