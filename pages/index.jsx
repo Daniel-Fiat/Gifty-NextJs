@@ -100,7 +100,7 @@ const Home = ({ products }) => {
         <h2 id='title-featured'>Featured</h2>
         <Row>
           {
-            products?.map(product => <CardProductSearchList key={product._id} product={product}></CardProductSearchList>)
+            products.length === 0 ? <p>No hay productos</p> : products.map(product => <CardProductSearchList key={product._id} product={product}></CardProductSearchList>)
           }
         </Row>
       </div>

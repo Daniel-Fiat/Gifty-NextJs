@@ -14,7 +14,8 @@ const CardProductSearchList = ({ product }) => {
                         src={product.imgUrl}
                         height={100}
                         width={100}
-                        alt={`img${product.name}`} />
+                        alt={`img${product.name}`}
+                    />
                     <p className="title">{product.name.length > 22 ?
                         product.name.substring(0, 20) + "..." :
                         product.name}</p>
@@ -22,7 +23,7 @@ const CardProductSearchList = ({ product }) => {
                     <p id={Style.homeRating} className="rating">⭐{product.rating}.0</p>
                 </div>
             </Link>
-        </Col >
+        </Col>
     )
 }
 export default CardProductSearchList;
