@@ -12,7 +12,7 @@ import wishTrue from '../../public/assets/Corazon-rojo.png';
 import wishFalse from '../../public/assets/Corazon-Blanco.png';
 import startRanting from '../../public/assets/StarRating.png';
 
-import Nabvar from '../../components/Navbar/Navbar'
+
 
 
 
@@ -22,7 +22,7 @@ const ProductDetail = () => {
     const [reviews, setReviews] = useState()
     const router = useRouter()
     useEffect(() => {
-
+        console.log("?")
         ProductAPI.getOneProduct(router.query.id)
             .then(productRes => {
                 return productRes
@@ -112,6 +112,7 @@ const ProductDetail = () => {
             {reviews && <h5>reviews</h5>}
             {reviews?.map(review => {
                 return (
+
                     <div key={review._id}>
                         <div class="card">
                             <div class="card-header">
@@ -124,10 +125,11 @@ const ProductDetail = () => {
                             </div>
                         </div>
                     </div>
+
                 )
             })}
 
-            <Nabvar />
+
         </>
     );
 
