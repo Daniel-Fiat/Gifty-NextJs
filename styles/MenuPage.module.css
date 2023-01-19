@@ -1,0 +1,26 @@
+.menupagecontainer a {
+    text-decoration: none;
+    color: var(--color-blue);
+
+}
+
+.menupagecontainer h1 {
+    color: var(--color-red);
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid var(--color-red);
+    padding-bottom: 10px;
+    margin-top: 12px;
+}
+
+.menulink {
+    border-bottom: 1px solid var(--color-blue);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menulink img {
+    width: 8px;
+}

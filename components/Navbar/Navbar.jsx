@@ -20,7 +20,7 @@ function NavBar() {
                 <Navbar id={Style.Navbar}
                     fixed="bottom"
                     className=" navbar d-flex justify-content-evenly">
-                    <Link href={'/'} id={Style.Link}>
+                    <Link href={'/menu'} id={Style.Link}>
                         <div id={Style.Navbardiv} className="d-flex flex-column align-items-center">
                             <Image src={homelogo} alt="" id={Style.Image} />
                             <span>Home</span>
