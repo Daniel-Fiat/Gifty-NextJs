@@ -1,10 +1,10 @@
 import { Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import './CardSearchList.css';
+import style from './CardSearchList.module.css';
 
 const CardSearchList = ({ _id, img, title, path }) => {
     return (
-        <Col className="card-search" xs="4" lg="4">
+        <Col className={style.cardSearch} xs="4" lg="4">
             <Link to={path}>
                 <div key={_id}>
                     <figure>

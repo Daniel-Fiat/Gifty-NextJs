@@ -32,7 +32,7 @@ function NavBar() {
                             <span>Search</span>
                         </div>
                     </Link>
-                    <Link href={'/'} id={Style.Link}>
+                    <Link href={'/user/mygifts'} id={Style.Link}>
                         <div className="d-flex flex-column align-items-center">
                             <Image src={gift} alt="" id={Style.Image} />
                             <span>MyGiftys</span>

@@ -1,12 +1,12 @@
-.card-search img {
+.cardSearch img {
     width: 100%;
 }
 
-.card-search figure {
+.cardSearch figure {
     position: relative
 }
 
-.card-search figcaption {
+.cardSearch figcaption {
     position: absolute;
     text-align: center;
     left: 0;

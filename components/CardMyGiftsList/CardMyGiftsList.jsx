@@ -38,10 +38,10 @@ const CardCatalogList = ({ order }) => {
                 {order.State === "delivered" &&
                     <Accordion>
                         <Accordion.Item eventKey="0">
-                            <Accordion.Header className='title-review-accordion'>Review</Accordion.Header>
+                            <Accordion.Header className={style.titleReviewAccordion}>Review</Accordion.Header>
                             <Accordion.Body>
                                 <form onSubmit={createReview}>
-                                    <select onChange={updateReview} name="rating" id="rating" >
+                                    <select onChange={updateReview} name="rating" id={style.rating} >
                                         <option value={1}>⭐</option>
                                         <option value={2}>⭐⭐</option>
                                         <option value={3}>⭐⭐⭐</option>

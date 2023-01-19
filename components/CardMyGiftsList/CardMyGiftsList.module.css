@@ -11,33 +11,28 @@
     border-radius: 8px;
 }
 
-
-.cardMyGift {
+#cardMyGift .h5 {
     font-size: 14px;
 }
 
-#card-mygift .h5 {
-    font-size: 14px;
-}
-
-#card-mygift .h5:nth-child(1) {
+#cardMyGift .h5:nth-child(1) {
     font-weight: bold;
     color: var(--color-blue);
     text-transform: capitalize;
 }
 
-#card-mygift .h5:nth-child(2) {
+#cardMyGift .h5:nth-child(2) {
     font-weight: regular;
     color: var(--color-blue);
 }
 
-#card-mygift .h5:nth-child(3) {
+#cardMyGift .h5:nth-child(3) {
     font-weight: regular;
     color: var(--color-blue);
     font-size: 12px;
 }
 
-.title-review-accordion button {
+.titleReviewAccordion button {
     color: var(--color-blue);
     padding: 5px;
 }
