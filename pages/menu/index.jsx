@@ -49,7 +49,7 @@ const Menu = () => {
                             </Link>
                         </>
                         :
-                        <Link href={'/RegisterLogin'}>
+                        <Link href={'/registerLogin'}>
                             <div className={style.menulink}>Login
                                 <Image
                                     width={8}
