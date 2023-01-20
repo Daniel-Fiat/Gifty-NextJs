@@ -1,0 +1,70 @@
+.NewproductFormContainer {
+    min-height: calc(100vh - 53.9px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+#NewproductForm {
+    background-color: var(--color-celeste);
+    width: 80%;
+    padding: 2rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#NewproductForm h1 {
+    color: var(--color-red);
+    font-weight: bold;
+}
+
+#NewproductForm form {
+    text-align: center;
+}
+
+#NewproductForm label {
+    width: 90%;
+    text-align: left;
+}
+
+#msgred {
+    color: red;
+}
+
+#register-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.NewproductInput {
+    border: 1px solid;
+    border-radius: 15px;
+    border-color: var(--color-blue);
+    width: 90%;
+    margin-bottom: .5rem;
+    padding: 7px;
+    font-size: .8rem;
+}
+
+.NewproductInput:focus {
+    outline: none;
+    border: 1.5px solid;
+    border-color: red;
+}
+
+#CreateBoton {
+    border: 1px solid;
+    border-radius: 15px;
+    border-color: var(--color-red);
+    background-color: var(--color-red);
+    color: white;
+    width: 70%;
+    margin: .5rem;
+    padding: 5px;
+    font-size: 1rem;
+}
