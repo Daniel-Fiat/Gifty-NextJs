@@ -11,6 +11,7 @@ const Search = () => {
 
     useEffect(() => {
         if (user) {
+            console.log(user)
             ProductAPI.getWishList(user._id).then(products => {
                 setProducts(products)
             })

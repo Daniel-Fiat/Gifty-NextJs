@@ -12,9 +12,9 @@ const CardCatalogList = ({ product }) => {
                     <Image
                         src={product.imgUrl}
                         className={style.cardsearchproductimg}
-                        width={10}
-                        height={10}
-                        alt="" />
+                        width={200}
+                        height={200}
+                        alt='product ${images}' />
                     <p className={style.title}>{product.name}</p>
                     <p className={style.price}>{product.price}€</p>
                     <p className={style.rating}>{'⭐'.repeat(product.rating)}</p>
