@@ -31,11 +31,12 @@ const ProductDetail = () => {
             })
             .then((productRes) => {
                 setProduct(productRes)
-
-                UserApi.getOne(user._id).then(userApi => {
-                    const newvalidate = userApi.wishList.includes(productRes._id)
-                    setValidateWishList(newvalidate)
-                })
+                if (user) {
+                    UserApi.getOne(user._id).then(userApi => {
+                        const newvalidate = userApi.wishList.includes(productRes._id)
+                        setValidateWishList(newvalidate)
+                    })
+                }
 
             })
     }, [router.query.id, user])
@@ -73,7 +74,12 @@ const ProductDetail = () => {
                 <div id="ProductCard">
                     <h1 id="titleCard">{product.name}</h1>
                     <figure id='figure-imgProduct'>
-                        <img id="IMGproduct" src={product.imgUrl} alt="esto" />
+                        <Image
+                            id="IMGproduct"
+                            width={70}
+                            height={70}
+                            src={product.imgUrl}
+                            alt="esto" />
                         <figcaption>
                             {validateWishList ?
                                 (<form onSubmit={removeWishList}>
@@ -111,9 +117,16 @@ const ProductDetail = () => {
 
             }
             <div id='Gift-boton'>
-                <Link href={`/gifty/${product._id}`}>
-                    Regalar
-                </Link>
+                {
+                    user ?
+                        <Link href={`/gifty/${product._id}`}>
+                            Regalar
+                        </Link> :
+                        <Link href={`/registerLogin`}>
+                            Regalar
+                        </Link>
+
+                }
             </div>
             {reviews && <h5>reviews</h5>}
             {reviews?.map(review => {
