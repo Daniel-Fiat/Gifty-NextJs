@@ -35,111 +35,111 @@ const ProductDetail = () => {
                 UserApi.getOne(user._id).then(userApi => {
                     const newvalidate = userApi.wishList.includes(productRes._id)
                     setValidateWishList(newvalidate)
-
-
                 })
-            }, [user])
-
-        useEffect(() => {
-            ReviewAPI.getByProduct(router.query.id).then(reviews => {
-                setReviews(reviews)
 
             })
+    }, [router.query.id, user])
 
-        }, [])
+    useEffect(() => {
+        ReviewAPI.getByProduct(router.query.id).then(reviews => {
+            setReviews(reviews)
 
-        const removeWishList = (event) => {
-            event.preventDefault()
-            if (user) {
-                UserApi.removeWishList(user._id, router.query.id).then()
-                const newvalidate = false
-                setValidateWishList(newvalidate)
-            }
+        })
+
+    }, [router.query.id])
+
+    const removeWishList = (event) => {
+        event.preventDefault()
+        if (user) {
+            UserApi.removeWishList(user._id, router.query.id).then()
+            const newvalidate = false
+            setValidateWishList(newvalidate)
         }
+    }
 
-        const addWishList = (event) => {
-            event.preventDefault()
-            if (user) {
-                UserApi.addWishList(user._id, router.query.id).then()
-                const newvalidate = true
-                setValidateWishList(newvalidate)
-            }
+    const addWishList = (event) => {
+        event.preventDefault()
+        if (user) {
+            UserApi.addWishList(user._id, router.query.id).then()
+            const newvalidate = true
+            setValidateWishList(newvalidate)
         }
+    }
 
-        return (
-            <>
-                {
+    return (
+        <>
+            {
 
-                    <div id="ProductCard">
-                        <h1 id="titleCard">{product.name}</h1>
-                        <figure id='figure-imgProduct'>
-                            <img id="IMGproduct" src={product.imgUrl} alt="esto" />
-                            <figcaption>
-                                {validateWishList ?
-                                    (<form onSubmit={removeWishList}>
-                                        <button type="submit">
-                                            <Image
-                                                src={wishTrue}
-                                                alt={wishTrue}
-                                                height={30}
-                                                width={100} />
-                                        </button>
-                                    </form>)
-                                    :
-                                    (<form onSubmit={addWishList}>
-                                        <button type="submit">
-                                            <Image
-                                                src={wishFalse}
-                                                alt={wishFalse}
-                                                height={30}
-                                                width={100} />
-                                        </button>
-                                    </form>)
+                <div id="ProductCard">
+                    <h1 id="titleCard">{product.name}</h1>
+                    <figure id='figure-imgProduct'>
+                        <img id="IMGproduct" src={product.imgUrl} alt="esto" />
+                        <figcaption>
+                            {validateWishList ?
+                                (<form onSubmit={removeWishList}>
+                                    <button type="submit">
+                                        <Image
+                                            src={wishTrue}
+                                            alt={wishTrue}
+                                            height={30}
+                                            width={100} />
+                                    </button>
+                                </form>)
+                                :
+                                (<form onSubmit={addWishList}>
+                                    <button type="submit">
+                                        <Image
+                                            src={wishFalse}
+                                            alt={wishFalse}
+                                            height={30}
+                                            width={100} />
+                                    </button>
+                                </form>)
 
-                                }
-                            </figcaption>
-                        </figure>
-                        <p id='DetailsProduct' >{product.description}</p>
-                        <h1>                                        <Image
-                            src={startRanting}
-                            alt={wishTrue}
-                            id="StartRating"
-                            height={20}
-                            width={17} />{product.rating}</h1>
-                        <span id='PriceSpan'>{`${product.price} €`}</span>
-                    </div>
-
-                }
-                <div id='Gift-boton'>
-                    <Link href={`/gifty/${product._id}`}>
-                        Regalar
-                    </Link>
+                            }
+                        </figcaption>
+                    </figure>
+                    <p id='DetailsProduct' >{product.description}</p>
+                    <h1>                                        <Image
+                        src={startRanting}
+                        alt={wishTrue}
+                        id="StartRating"
+                        height={20}
+                        width={17} />{product.rating}</h1>
+                    <span id='PriceSpan'>{`${product.price} €`}</span>
                 </div>
-                {reviews && <h5>reviews</h5>}
-                {reviews?.map(review => {
-                    return (
 
-                        <div key={review._id}>
-                            <div class="card">
-                                <div class="card-header">
-                                    {"⭐".repeat(review.rating)}
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">{review.userId.email}</h5>
-                                    <p class="card-text">{review.comment}</p>
-                                    <small> {review.createdAt}</small>
-                                </div>
+            }
+            <div id='Gift-boton'>
+                <Link href={`/gifty/${product._id}`}>
+                    Regalar
+                </Link>
+            </div>
+            {reviews && <h5>reviews</h5>}
+            {reviews?.map(review => {
+                return (
+
+                    <div key={review._id}>
+                        <div class="card">
+                            <div class="card-header">
+                                {"⭐".repeat(review.rating)}
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">{review.userId.email}</h5>
+                                <p class="card-text">{review.comment}</p>
+                                <small> {review.createdAt}</small>
                             </div>
                         </div>
+                    </div>
 
-                    )
-                })}
+                )
+            })}
 
 
-            </>
-        );
+        </>
+    );
 
-    }
+}
 
 export default ProductDetail;
 
