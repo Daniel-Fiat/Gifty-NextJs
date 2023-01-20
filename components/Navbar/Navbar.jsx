@@ -11,7 +11,7 @@ import Style from './Navbar.module.css';
 function NavBar() {
     const location = useRouter().pathname
     console.log(location)
-    const paths = ["/login", "/registerlogin", "/register", "/sucesspayment/", "/cancelpayment/", "/postsucesspayment"];
+    const paths = ["/login", "/registerlogin", "/register", "/sucessPayment/", "/cancelpayment/", "/postsucesspayment"];
     if (paths.some(path => location.includes(path))) {
         return null
     } else {

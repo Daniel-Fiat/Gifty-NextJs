@@ -1,0 +1,51 @@
+.sucessPaymentContainer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#checkGreen {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+.elipseBlueUp {
+    position: absolute;
+    width: 25vw;
+    height: 27vw;
+    top: -3vh;
+    left: 0;
+    z-index: -2;
+}
+
+.elipsePinkUp {
+    position: absolute;
+    width: 40vw;
+    height: 23vw;
+    top: -7vh;
+    left: 0vw;
+    z-index: -1;
+}
+
+.elipseBlueDown {
+    position: absolute;
+    width: 27vw;
+    height: 27vw;
+    bottom: 0vh;
+    right: 0;
+    z-index: -1;
+}
+
+.elipseYellowDown {
+    position: absolute;
+    width: 40vw;
+    height: 9vw;
+    bottom: 0vh;
+    right: 10vw;
+    z-index: -2;
+}
