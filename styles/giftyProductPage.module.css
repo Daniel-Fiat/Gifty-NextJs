@@ -1,0 +1,58 @@
+#TextareaDedicat {
+    width: 100%;
+    background: #F6FBFF;
+    border-radius: 10px;
+    box-shadow: 14px 15px 21px -11px rgba(20, 35, 57, 0.07);
+    border-color: var(--color-red);
+}
+
+#dateInput {
+    border: 1px solid;
+    border-radius: 15px;
+    border-color: var(--color-red);
+    width: 90%;
+    margin: .5rem;
+    padding: 7px;
+    font-size: .8rem;
+
+}
+
+#FormInput {
+    border: 1px solid;
+    border-radius: 15px;
+    border-color: var(--color-red);
+    margin: 10px 0;
+    font-size: .8rem;
+    padding: 5px;
+
+
+
+}
+
+#FormInput:focus {
+    outline: none;
+    border: 1.5px solid;
+    border-color: var(--color-red);
+    font-size: .8rem;
+}
+
+#createOrderBoton {
+    border: 1px solid;
+    border-radius: 15px;
+    border-color: var(--color-red);
+    background-color: var(--color-red);
+    color: white;
+    width: 70%;
+    margin: .5rem;
+    padding: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+#UpdateproductForm {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
