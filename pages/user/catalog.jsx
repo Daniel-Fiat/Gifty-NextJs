@@ -11,9 +11,12 @@ const Search = () => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        ProductAPI.getCatalog(user._id).then(products => {
-            setProducts(products)
-        })
+        if (user) {
+            ProductAPI.getCatalog(user._id).then(products => {
+                setProducts(products)
+            })
+
+        }
     }, [])
 
     return (

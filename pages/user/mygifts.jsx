@@ -12,7 +12,7 @@ const Mygifts = () => {
         OrderAPI.getByClient(user._id).then(orders => {
             setOrders(orders)
         })
-    }, [])
+    }, [user])
 
 
     return (

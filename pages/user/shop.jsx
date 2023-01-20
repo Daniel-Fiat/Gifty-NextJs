@@ -5,15 +5,19 @@ import { useContext, useEffect, useState } from 'react'
 import CardMyShop from '../../components/CardMyShopList/CardMyShopList'
 import { Row } from 'react-bootstrap'
 const MyShop = () => {
-    const { user } = useContext(AuthContext);
     const [orders, setOrders] = useState([]);
+    const { user } = useContext(AuthContext);
 
     useEffect(() => {
+        console.log("algo")
+
         OrderAPI.getBySeller(user._id).then(orders => {
             const data = orders.filter(order => order.State !== "pendingPayment")
             setOrders(data)
         })
-    }, [])
+
+
+    }, [user])
     return (
         <>
             <Row>
