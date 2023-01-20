@@ -22,13 +22,13 @@
     text-decoration: none;
 }
 
-.cardmyshop .card {
+.card {
     flex-direction: row;
     align-items: center;
     border: 0;
 }
 
-.cardmyshop .card-body {
+.cardBody {
     color: var(--color-blue);
 }
 
@@ -43,13 +43,13 @@
     text-transform: capitalize;
 }
 
-#buttons-myshop {
+#buttonsMyshop {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#img-card-myshop {
+#imgCardMyShop {
     height: 170px;
     object-fit: cover;
     width: 130px;

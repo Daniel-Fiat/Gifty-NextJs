@@ -1,4 +1,4 @@
-import './CardMyShopList.css'
+import style from './CardMyShopList.module.css'
 import { Button, Card, Col, Row } from 'react-bootstrap'
 import OrderAPI from '../../services/order.service'
 
@@ -13,12 +13,12 @@ const CardMyShop = ({ order }) => {
         OrderAPI.updateState(order._id, "delivered")
     }
     return (
-        <Row xs={1} md={2} className="cardmyshop g-4">
+        <Row xs={1} md={2} className={style.cardmyshop} >
             <Col>
-                <Card>
-                    <Card.Img id="img-card-myshop" variant="top" src={order.productID.imgUrl} />
-                    <Card.Body>
-                        <Card.Title>{order.productID.name}</Card.Title>
+                <Card className={style.card} >
+                    <Card.Img id={style.imgCardMyShop} variant="top" src={order.productID.imgUrl} />
+                    <Card.Body className={style.cardBody}>
+                        <Card.Title >{order.productID.name}</Card.Title>
                         <Card.Title>Price: {order.price}€</Card.Title>
                         <Card.Title>Buyer: {order.clientUser.email}</Card.Title>
                         <Card.Title>Delivery Date: {order.deliverDate}</Card.Title>
@@ -26,7 +26,7 @@ const CardMyShop = ({ order }) => {
                         <Card.Text>Message: {order.dedication}</Card.Text>
                     </Card.Body>
                 </Card>
-                <div id="buttons-myshop">
+                <div id={style.buttonsMyshop}>
                     {order.State === "pendingConfirmation" &&
                         <>
                             <form onSubmit={acceptedOrder}>
