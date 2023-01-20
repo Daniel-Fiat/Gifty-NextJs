@@ -1,0 +1,92 @@
+#postSucessContainer {
+    height: calc(100vh - 65.9px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#imgGift {
+    width: 100px;
+    height: 125px;
+    margin-bottom: 20px;
+}
+
+#postSucessTitle {
+    line-height: 45px;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-blue);
+    margin-bottom: 20px;
+}
+
+#postSucessSubtitle {
+    font-size: 16px;
+    color: var(--color-blue);
+    margin-bottom: 20px;
+}
+
+#postSucessButtonHome {
+    border: 1px solid;
+    border-radius: 15px;
+    border-color: var(--color-red);
+    background-color: var(--color-red);
+    color: white;
+    font-weight: bold;
+    width: 70%;
+    margin: .5rem;
+    padding: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+#postSucessButtonGifts {
+    border: 1px solid;
+    border-radius: 15px;
+    border-color: var(--color-blue);
+    font-weight: bold;
+    background-color: transparent;
+    color: var(--color-blue);
+    width: 70%;
+    margin: .5rem;
+    padding: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.elipseBlueUp {
+    position: absolute;
+    width: 25vw;
+    height: 27vw;
+    top: -3vh;
+    left: 0;
+    z-index: -2;
+}
+
+.elipsePinkUp {
+    position: absolute;
+    width: 40vw;
+    height: 23vw;
+    top: -7vh;
+    left: 0vw;
+    z-index: -1;
+}
+
+.elipseBlueDown {
+    position: absolute;
+    width: 27vw;
+    height: 27vw;
+    bottom: 0vh;
+    right: 0;
+    z-index: -1;
+}
+
+.elipseYellowDown {
+    position: absolute;
+    width: 40vw;
+    height: 9vw;
+    bottom: 0vh;
+    right: 10vw;
+    z-index: -2;
+}

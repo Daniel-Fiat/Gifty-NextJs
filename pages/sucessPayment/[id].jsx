@@ -45,7 +45,8 @@ const SucessPayment = () => {
                 <Image
                     className={style.elipseYellowDown}
                     src={elipseYellowDown}
-                    alt="elipseYellowDown" /></div>
+                    alt="elipseYellowDown" />
+            </div>
         </Row>
     )
 }
