@@ -49,14 +49,24 @@ const Menu = () => {
                             </Link>
                         </>
                         :
-                        <Link href={'/registerLogin'}>
-                            <div className={style.menulink}>Login
-                                <Image
-                                    width={8}
-                                    src={arrow}
-                                    alt="arrow.png" />
-                            </div>
-                        </Link>
+                        <>
+                            <Link href={'/login'}>
+                                <div className={style.menulink}>Login
+                                    <Image
+                                        width={8}
+                                        src={arrow}
+                                        alt="arrow.png" />
+                                </div>
+                            </Link>
+                            <Link href={'/register'}>
+                                <div className={style.menulink}>Register
+                                    <Image
+                                        width={8}
+                                        src={arrow}
+                                        alt="arrow.png" />
+                                </div>
+                            </Link>
+                        </>
                 }
             </div>
         </>

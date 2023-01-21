@@ -5,10 +5,12 @@ import elipseBlueDown from '../../public/assets/ElipseAzulAbajo.png';
 import elipseYellowDown from '../../public/assets/ElipseAmarillaAbajo.png';
 
 import UserApi from '../../services/user.service'
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Row } from 'react-bootstrap';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import { AuthContext } from '../../context/auth.context';
+
 
 const Register = () => {
 
@@ -16,12 +18,21 @@ const Register = () => {
     const [user, setUser] = useState({})
     const [matchPass, setMatchPass] = useState(false)
     const [errUserCreate, setError] = useState(false)
+    const { storeSetToken, authentication } = useContext(AuthContext);
+
 
     const createNewUSer = (event) => {
         event.preventDefault()
         if (matchPass && user.email) {
             UserApi.createUser(user)
-                .then(() => navigate.push('/login'))
+                .then(() => {
+                    UserApi.login(user)
+                        .then((res) => {
+                            storeSetToken(res.token);
+                            authentication();
+                            history.go(-2)
+                        })
+                })
                 .catch(err => setError(true))
         } else {
             setError(true)
