@@ -24,33 +24,35 @@ const Home = ({ products }) => {
 
   return (
     <>
-      <Image
-        id='navbartopleft'
-        src={navbarTopLeft}
-        height={100}
-        width={100}
-        alt="NavbarTopLeft" />
-      <Image
-        id='navbartoprighttop'
-        src={navbarTopRightTop}
-        height={90}
-        width={100}
-        alt="NavbarTopRightTop" />
-      <Image
-        id='navbartoprightbot'
-        src={navbarTopRightBot}
-        height={70}
-        width={100}
-        alt="NavbarTopRightBot" />
-      <div id="home-title-background">
-        <h1 id="home-title">Gifty</h1>
+      <div id="home-topbar">
+        <Image
+          id='navbartopleft'
+          src={navbarTopLeft}
+          height={100}
+          width={100}
+          alt="NavbarTopLeft" />
+        <Image
+          id='navbartoprighttop'
+          src={navbarTopRightTop}
+          height={90}
+          width={100}
+          alt="NavbarTopRightTop" />
+        <Image
+          id='navbartoprightbot'
+          src={navbarTopRightBot}
+          height={70}
+          width={100}
+          alt="NavbarTopRightBot" />
+        <div id="home-title-background">
+          <h1 id="home-title">Gifty</h1>
+        </div>
+        <Image
+          id='navbar-top-center'
+          src={navbarTopCenter}
+          height={50}
+          width={100}
+          alt="NavbarTopRightBot" />
       </div>
-      <Image
-        id='navbar-top-center'
-        src={navbarTopCenter}
-        height={50}
-        width={100}
-        alt="NavbarTopRightBot" />
       <div id="home-featured">
         <h2 id='title-featured'>Discounts</h2>
         <Carousel id="Carousel">

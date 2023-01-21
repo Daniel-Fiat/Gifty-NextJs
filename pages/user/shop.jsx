@@ -9,8 +9,6 @@ const MyShop = () => {
     const { user } = useContext(AuthContext);
 
     useEffect(() => {
-        console.log("algo")
-
         OrderAPI.getBySeller(user._id).then(orders => {
             const data = orders.filter(order => order.State !== "pendingPayment")
             setOrders(data)
@@ -18,6 +16,7 @@ const MyShop = () => {
 
 
     }, [user])
+
     return (
         <>
             <Row>
