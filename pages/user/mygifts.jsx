@@ -8,7 +8,6 @@ const Mygifts = () => {
     const { user } = useContext(AuthContext);
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        console.log(user)
         OrderAPI.getByClient(user._id).then(orders => {
             setOrders(orders)
         })
@@ -18,7 +17,7 @@ const Mygifts = () => {
     return (
         <>
             <h1 id={style.mygiftsTitle}>My giftys</h1>
-            {
+            {orders.length ?
                 orders.map(order => {
                     return (
                         <>
@@ -27,6 +26,8 @@ const Mygifts = () => {
                         </>
                     )
                 })
+                :
+                <h1>Todavia no regalaste nada</h1> // completar con un boton que lleve a busqueda o algo. y una imagen gifty? 
             }
 
         </>
