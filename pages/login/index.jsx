@@ -27,7 +27,7 @@ const Login = () => {
             .then((res) => {
                 storeSetToken(res.token);
                 authentication();
-                navigate.push('/')
+                history.go(-2)
             })
             .catch(err => setError(true))
     }
