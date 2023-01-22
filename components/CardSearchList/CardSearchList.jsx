@@ -6,7 +6,7 @@ import style from './CardSearchList.module.css';
 const CardSearchList = ({ _id, img, title, path }) => {
     return (
         <Col className={style.cardSearch} xs="4" lg="4">
-            <Link href={path}>
+            <Link href={`search/${path}`}>
                 <div key={_id}>
                     <figure>
                         <Image
@@ -17,7 +17,7 @@ const CardSearchList = ({ _id, img, title, path }) => {
                     </figure>
                 </div>
             </Link>
-        </Col>
+        </Col >
     )
 }
 export default CardSearchList;
