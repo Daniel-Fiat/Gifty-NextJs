@@ -15,14 +15,15 @@ import Image from 'next/image';
 const CategoryChance = () => {
     const { id } = useRouter().query
     console.log(id)
-    const categoryChanceTypeApi = id.split("-")[0];
-    const categoryChanceType = id.split("-")[1];
     const AgeRange = ["babyboomers", 'generaciónX', 'millennials', 'generaciónZ', 'Alpha'];
 
     const [offset, setOffset] = useState(4)
     const [filter, setFilter] = useState([])
     const [sort, setSort] = useState()
     const [valueSearch, setvalueSearch] = useState("")
+    const [categoryChanceTypeApi, setCategoryChanceTypeApi] = useState("")
+    const [categoryChanceType, setCategoryChanceType] = useState("")
+
 
     const [selectedOption, setSelectedOption] = useState()
     const [minPrice, setMinPrice] = useState(0)
@@ -39,13 +40,15 @@ const CategoryChance = () => {
     const filterShow = () => { setShowFilter(true) }
 
     useEffect(() => {
+        setCategoryChanceTypeApi(id.split("-")[0])
+        setCategoryChanceType(id.split("-")[1])
         ProductAPI
             .getAllproduct({ [categoryChanceTypeApi]: categoryChanceType }, LIMIT)
             .then(products => {
                 setFilter(products)
                 setOffset(4)
             })
-    }, [categoryChanceTypeApi, categoryChanceType])
+    }, [id, categoryChanceTypeApi, categoryChanceType])
 
     const filterProductsSearch = (event) => {
         const { value } = event.target;
