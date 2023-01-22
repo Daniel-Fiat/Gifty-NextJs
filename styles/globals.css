@@ -1,17 +1,3 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 @font-face {
   font-family: Nunito;
   src: url('../fonts/Nunito-Regular.ttf');
@@ -29,6 +15,23 @@ code {
   --color-celeste: #DFEFFB;
 }
 
+.container {
+  max-width: 450px !important;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
 
 .App {
   text-align: center;
@@ -89,6 +92,16 @@ code {
 }
 
 /*-------------- Home Styles----------------- */
+#home-topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  margin-left: -12px;
+  z-index: 1;
+}
+
 #home-featured {
   margin-top: 110px;
 }
@@ -167,17 +180,6 @@ code {
 
 .carousel-indicators {
   display: none;
-}
-
-@media (min-width: 600px) {
-  #Carousel {
-    height: 600px;
-    border-radius: 100px;
-  }
-
-  #Carousel h3 {
-    margin-bottom: 600px;
-  }
 }
 
 /* --------------ProductDetail ---------------*/
