@@ -8,9 +8,11 @@ const Mygifts = () => {
     const { user } = useContext(AuthContext);
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        OrderAPI.getByClient(user._id).then(orders => {
-            setOrders(orders)
-        })
+        if (user) {
+            OrderAPI.getByClient(user._id).then(orders => {
+                setOrders(orders)
+            })
+        }
     }, [user])
 
 
