@@ -1,0 +1,105 @@
+.titlePage {
+    color: var(--color-red);
+    font-weight: bold;
+    margin-top: 12px;
+    text-transform: capitalize;
+}
+
+#categoryChanceLinks {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 10px 0;
+    font-weight: bold;
+    color: var(--color-blue);
+}
+
+#categoryChanceLinks div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#filterCategoryChanceImg,
+#orderCategoryChanceImg {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+}
+
+#filteCategoryChanceLink,
+#orderCategoryChanceLink {
+    text-decoration: none;
+    color: var(--color-blue);
+}
+
+#headerFilter,
+#headerOrder {
+    border: 0;
+}
+
+#headerFilter h1,
+#headerOrder h1 {
+    font-size: 24px;
+    color: var(--color-red);
+    font-weight: bold;
+}
+
+#filterModal p {
+    color: var(--color-blue);
+    font-weight: bold;
+}
+
+#order label {
+    color: var(--color-blue);
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+#selectRangeAge {
+    border: 1px solid;
+    border-radius: 15px;
+    border-color: var(--color-blue);
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 7px;
+    font-size: .8rem;
+    text-transform: capitalize;
+}
+
+#selectRangeAge:focus {
+    outline: none;
+    border: 1.5px solid;
+    border-color: red;
+}
+
+#buttonfilter {
+    border: 1px solid;
+    border-radius: 15px;
+    color: var(--color-red);
+    border-color: var(--color-red);
+    background-color: var(--color-red);
+    color: white;
+    font-weight: bold;
+    width: 150px;
+    padding: 5px;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.SearchInput {
+    border: 1px solid;
+    border-radius: 15px;
+    border-color: var(--color-blue);
+    width: 100%;
+    margin: 0.5rem 0 0.5rem 0;
+    padding: 7px;
+    font-size: .8rem;
+}
+
+.SearchInput:focus {
+    outline: none;
+    border: 1.5px solid;
+    border-color: var(--color-red);
+}
