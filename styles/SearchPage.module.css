@@ -1,0 +1,28 @@
+.SearchInput {
+    border: 1px solid;
+    border-radius: 15px;
+    border-color: var(--color-blue);
+    width: 100%;
+    margin: 0.5rem 0 0.5rem 0;
+    padding: 7px;
+    font-size: .8rem;
+}
+
+.SearchInput:focus {
+    outline: none;
+    border: 1.5px solid;
+    border-color: var(--color-red);
+}
+
+.titleSearchCategory {
+    color: var(--color-blue);
+    font-size: 15px;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+#mygiftsTitle {
+    font-weight: bold;
+    color: var(--color-red);
+    margin-top: 12px;
+}

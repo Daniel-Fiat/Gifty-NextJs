@@ -26,7 +26,7 @@ function NavBar() {
                             <span>Home</span>
                         </div>
                     </Link>
-                    <Link href={'/'} id={Style.Link}>
+                    <Link href={'/search'} id={Style.Link}>
                         <div className="d-flex flex-column align-items-center">
                             <Image src={lupa} alt="" id={Style.Image} />
                             <span>Search</span>
