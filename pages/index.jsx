@@ -52,7 +52,7 @@ const Home = ({ products }) => {
           height={50}
           width={500}
           alt="NavbarTopRightBot"
-          priority />
+          unoptimized={true} />
       </div>
       <div id="home-featured">
         <h2 id='title-featured'>Discounts</h2>
