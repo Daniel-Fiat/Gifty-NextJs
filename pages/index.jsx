@@ -50,7 +50,7 @@ const Home = ({ products }) => {
           id='navbar-top-center'
           src={navbarTopCenter}
           height={50}
-          width={100}
+          width={500}
           alt="NavbarTopRightBot" />
       </div>
       <div id="home-featured">

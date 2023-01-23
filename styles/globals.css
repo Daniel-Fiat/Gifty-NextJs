@@ -129,6 +129,7 @@ code {
   color: var(--color-red);
   margin-top: 22px;
   font-weight: bold;
+  font-size: 34px;
 }
 
 #navbar-top-center {
@@ -176,6 +177,7 @@ code {
   color: var(--color-red);
   border-radius: 10px;
   padding: 3px;
+  font-size: 24px;
 }
 
 .carousel-indicators {

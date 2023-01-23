@@ -25,29 +25,31 @@ const ProductDetail = () => {
 
     const router = useRouter()
     useEffect(() => {
-        ProductAPI.getOneProduct(router.query.id)
-            .then(productRes => {
-                return productRes
-            })
-            .then((productRes) => {
-                setProduct(productRes)
-                if (user) {
-                    UserApi.getOne(user._id).then(userApi => {
-                        const newvalidate = userApi.wishList.includes(productRes._id)
-                        setValidateWishList(newvalidate)
-                    })
-                }
+        if (router.isReady) {
+            ProductAPI.getOneProduct(router.query.id)
+                .then(productRes => {
+                    return productRes
+                })
+                .then((productRes) => {
+                    setProduct(productRes)
+                    if (user) {
+                        UserApi.getOne(user._id).then(userApi => {
+                            const newvalidate = userApi.wishList.includes(productRes._id)
+                            setValidateWishList(newvalidate)
+                        })
+                    }
 
-            })
-    }, [router.query.id, user])
+                })
+        }
+    }, [router.isReady, router.query.id, user])
 
     useEffect(() => {
-        ReviewAPI.getByProduct(router.query.id).then(reviews => {
-            setReviews(reviews)
-
-        })
-
-    }, [router.query.id])
+        if (router.isReady) {
+            ReviewAPI.getByProduct(router.query.id).then(reviews => {
+                setReviews(reviews)
+            })
+        }
+    }, [router.isReady, router.query.id])
 
     const removeWishList = (event) => {
         event.preventDefault()
@@ -76,8 +78,8 @@ const ProductDetail = () => {
                     <figure id='figure-imgProduct'>
                         <Image
                             id="IMGproduct"
-                            width={70}
-                            height={70}
+                            width={450}
+                            height={500}
                             src={product.imgUrl}
                             alt="esto" />
                         <figcaption>
