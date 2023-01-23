@@ -51,7 +51,8 @@ const Home = ({ products }) => {
           src={navbarTopCenter}
           height={50}
           width={500}
-          alt="NavbarTopRightBot" />
+          alt="NavbarTopRightBot"
+          priority />
       </div>
       <div id="home-featured">
         <h2 id='title-featured'>Discounts</h2>
