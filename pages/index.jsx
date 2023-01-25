@@ -62,7 +62,7 @@ const Home = ({ products }) => {
               <Image
                 className="d-block w-100"
                 height={300}
-                width={100}
+                width={450}
                 src={Desayunos}
                 alt="First slide"
               />
@@ -76,7 +76,7 @@ const Home = ({ products }) => {
               <Image
                 className="d-block w-100"
                 height={300}
-                width={100}
+                width={450}
                 src={Pasteleria}
                 alt="First slide"
               />
@@ -90,7 +90,7 @@ const Home = ({ products }) => {
               <Image
                 className="d-block w-100"
                 height={300}
-                width={100}
+                width={450}
                 src={Picadas}
                 alt="First slide"
               />

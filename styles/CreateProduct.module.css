@@ -1,9 +1,10 @@
 .NewproductFormContainer {
-    min-height: calc(100vh - 53.9px);
+    min-height: calc(100vh - 85.609px);
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 12px;
+    margin-bottom: 12px;
 }
 
 #NewproductForm {
